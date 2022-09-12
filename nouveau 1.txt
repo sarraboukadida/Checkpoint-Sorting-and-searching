@@ -1,0 +1,31 @@
+ALGORITHM insert(arr:array_of integer)
+VAR
+i,j,e: integer;
+
+BEGIN
+    for i from 1 to arr.length-1 step 1 do
+        e:=t[i];
+        j:=i-1;
+        while j>=0 and arr[j]>cle do
+            arr[j+1]:=arr[j];
+            j:=j-1;
+        END_while
+        arr[j+1]:=e;
+    end_for
+END
+
+//algorithme principale
+ALGORITHM insert
+VAR
+    arr:array_of integer
+BEGIN
+    for i from 0 to arr.length step 1 do
+        write("entrer le nombre");
+        read(arr[i]);
+    END_FOR
+    for i from 0 to arr.length step 1 do
+        write("new tab");
+        read(arr[arr.length]);
+    END_FOR
+
+END
